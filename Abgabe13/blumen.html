@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Blumen</title>
+    <link rel="stylesheet" href="blumen.css">
+    <script src="blumen.js"></script>
+</head>
+<body>
+
+
+<nav id="navigation">
+    <ul>
+        <li><a href="#rot">rot</a></li>
+        <li><a href="#blau">blau</a></li>
+        <li><a href="#lila">lila</a></li>
+        <li><a href="#pink">pink</a></li>
+        <li><a href="#gelb">gelb</a></li>
+        <li><a href="#bunt">bunt</a></li>
+    </ul>
+</nav>
+
+<form>
+    <fieldset>
+        <legend>Persönliche Daten</legend>
+        <label for="lastName">Nachname </label>
+            <input type="text" id="lastName">
+        <label for="firstName">Vorname </label>
+            <input type="text" id="firstName">
+        <label for="w">weiblich</label>
+            <input id="w" type="radio" name="geschlecht" value="w">
+        <label for="m">männlich</label>
+            <input id="m" type="radio" name="geschlecht" value="m">
+        <input type="submit">
+        <input type="reset">
+
+    </fieldset>
+</form>
+
+<!-- Die Anordnung der Bilder und auch die Größe ist im Moment nebensächlich.-->
+<br>
+<div class="bounce"><h1>Galerie</h1>
+    <img id="blume" class="poppy" src="Images/poppy.jpg" alt="poppy"/>
+    <img class="zoom" src="Images/rose1.jpg" alt="rose1"/>
+    <img class="zoom" src="Images/kornblume.jpg" alt="kornblume"/>
+    <img class="zoom" src="Images/anemone.jpg" alt="anemone"/>
+    <img class="zoom" src="Images/cosmee.jpg"  alt="cosmee"/>
+    <img class="zoom" src="Images/krokos.jpg" alt="krokos"/>
+    <img class="zoom" src="Images/lilac.jpg" alt="lilac"/>
+    <img class="zoom" src="Images/aster.jpg" alt="aster"/>
+    <img class="zoom" src="Images/gerbera.png" alt="gerbera"/>
+    <img class="zoom" src="Images/rose2.jpg" alt="rose2"/>
+    <img class="zoom" src="Images/seeanemone.jpg" alt="seeanemone"/>
+    <img class="zoom" src="Images/colorful.jpg" alt="colorful"/>
+</div>
+
+<section>
+    <span class="bounce_button">Try me!</span>
+</section>
+
+</main>
+    </body>
+</html>

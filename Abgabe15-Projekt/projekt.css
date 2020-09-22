@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    display: grid;
+    background: #f47063;
+    color: white;
+}
+
+header{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.container{ /* wird erst per JS aktiviert*/
+    position: relative;
+    max-width: 95em;
+    height: 30em;
+    overflow: hidden;
+}
+#photoMe{}
+#photoMe figure{
+    position: relative;
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
+#photoMe figcaption{
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    color: white;
+}
+#photoMe img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.changer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 5000px;
+}
+.changer figure{
+    display: inline-block;
+    width: 60em;
+}
+
+#me, #me02, #me03{
+    width: 50%;
+    border: 5px solid white;
+}
+
+#gallery{
+    background: hsla(100,100%,100%,0.5);
+    border-radius: 20px;
+    padding: 20px;
+    width: 60%;
+    margin: 10px auto;
+}
+
+#gallery img{
+    width: 25%;
+    font-size: 24px;
+    color: #404040;
+    font-weight: 700;
+    text-align: center;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+#gallery img:active{
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    transform: rotate(360deg) scale(3);
+}
+.gallery{
+    background: white;
+    width: 150px;
+    margin: 15px 10px;
+    padding: 10px 10px 50px 10px;
+}
+
+#video{
+    background: hsla(100,100%,100%,0.5);
+    border-radius: 20px;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+}
+video{
+    width: 100% !important;
+    height: auto !important;
+}
+
+nav>ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    background-color: hsla(200, 50%, 50%, 0.8);
+}
+nav li:hover{
+    background-color: hsla(200, 65%, 56%, 0.9);
+    border-radius: 20px;
+}
+
+a{
+    color: white;
+
+}
+section{
+    display: grid;
+    text-align: center;
+}
+
+section#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+div ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+div li{
+    background-color: hsla(200, 50%, 50%, 0.8);
+    border-radius: 20px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit]{
+    background-color: #45d1d0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45d1d0;
+}
+input.invalid{
+    border-color: red;
+}
+
+textarea.invalid{
+    border-color: red;
+}
+
+.container1 {
+    border-radius: 20px;
+    background-color: #aeb0b2;
+    padding: 20px;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.containerImprint{
+    position: relative;
+    width: 50%;
+    margin: auto;
+
+}
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+    text-align: center;
+}
+.containerImprint:hover .overlay{
+    opacity: 1;
+}
+
+.footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    background-color: hsla(200, 50%, 50%, 0.8);
+    color: white;
+    font-size: 16px;
+}
+
+footer{
+    display: grid;
+    text-align: center;
+}
+
+
+/* Responsive CSS */
+@media screen and (max-width: 620px) {
+
+    header{display: block; width: 100%; font-size: x-large}
+
+    .container{display: block; height: 11em}
+
+    nav ul{display: block; width: 100%}
+
+    section#about, section#references{display: block; text-align: left; font-size: x-large }
+
+    div#gallery img{
+        display: block;
+        background: none;
+        width: 100%;
+        margin: auto;
+    }
+
+    #gallery img:hover{
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        transform: scale(1.5);
+    }
+
+    div#video video{display: block; width: 100%}
+
+    section#contact form{display: block; width: 100%; font-size: x-large}
+
+    div p{display: block; width: 100%; font-size: x-large}
+
+    div label{display: block}
+
+    .containerImprint{
+        position: relative;
+        width: 60%;
+        margin: auto;
+    }
+    .image{
+        display: block;
+    }
+
+
+    footer p{
+        display: block;
+        width: 100%;
+        font-size: x-large}
+
+
+}

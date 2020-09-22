@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project: MissRina's Portfolio</title>
+    <!--CSS-->
+    <link href="projekt.css" rel="stylesheet">
+    <!--JS-->
+    <script src="projekt.js"></script>
+</head>
+
+    <body>
+
+<!-- Navigation -->
+        <nav >
+            <ul>
+                <li><a href="#about"><img src="img/icon_about.png" width="36" alt="aboutme"></a></li>
+                <li><a href="#references"><img src="img/icon_questionmark.png" width="36" alt="references"></a></li>
+                <li><a href="#contact"><img src="img/icon_phone.png" width="36" alt="contact"></a></li>
+                <li><a href="https://www.facebook.com/missrinadesign/" target="_blank"><img src="img/icon_facebook.png" width="36" alt="facebook"></a></li>
+                <li><a href="https://www.instagram.com/missrinatheoneandonly/" target="_blank"><img src="img/icon_instagram.png" width="36" alt="instagram"></a></li>
+            </ul>
+        </nav>
+<!-- Header -->
+        <header class="header">
+            <h1 class="main-header">MissRina</h1>
+            <p>A short story about me.</p>
+        </header>
+<div id="controls">
+    <button id="back" aria-label="run animation backwards"> ◀◀ </button>
+    <button id="play" aria-label="play/pause animation">❙❙</button>
+    <!--<button id="cancel" aria-label="cancel animation">■</button>-->
+    <button id="forward" aria-label="choose next picture in animation">
+        ▶▶ </button>
+    <output></output>
+</div>
+<div id="container">
+    <div id="photoMe">
+        <figure><img id="me" src="img/me.jpg" alt="me"><figcaption class="text">Me01</figcaption></figure>
+        <figure><img id="me02" src="img/me2.jpg" alt="me"><figcaption>Me02</figcaption></figure>
+        <figure><img id="me03" src="img/me3.jpg" alt="me"><figcaption>Me03</figcaption></figure>
+    </div>
+</div>
+
+        <section id="about">
+            <aside>
+                <h3>All about me</h3>
+                <p>test test test test test test test test test test test test</p>
+            </aside>
+            <aside>
+                <h3>Me: Life as a student</h3>
+                <p>test test test test test test test test test test test test</p>
+            </aside>
+            <aside>
+                <h3>Myself: Work as a web and graphic designer</h3>
+                <p>test test test test test test test test test test test test</p>
+            </aside>
+            <aside>
+                <h3>I: Music my first love</h3>
+                <p>test test test test test test test test test test test test</p>
+            </aside>
+        </section>
+
+        <section id="references">
+            <h2>What I did so far</h2>
+
+            <!--Gallery-->
+            <div id="gallery">
+                <h2>Flyer Gallery</h2>
+                <img class="gallery" src="img/flyer01.jpg" alt="flyer01">
+                <img class="gallery" src="img/flyer02.jpg" alt="flyer02">
+                <img class="gallery" src="img/flyer03.jpg" alt="flyer03">
+                <img class="gallery" src="img/flyer04.jpg" alt="flyer04">
+                <img class="gallery" src="img/flyer05.jpg" alt="flyer05">
+                <img class="gallery" src="img/flyer06.jpg" alt="flyer06">
+            </div>
+
+
+
+            <!--Videos-->
+            <div id="video">
+                <h2>Videos</h2>
+                  <video src="vid/video1.mp4" controls></video>
+                  <video src="vid/video2.mp4" controls></video>
+              </div>
+        </section>
+
+        <section id="contact">
+            <div class="container1">
+                <h2>Contact</h2>
+                <p>Write a message for more information or if you want to work with me</p>
+                <form name="myForm" id="myForm" action="#">
+                    <label for="fname">First Name</label>
+                    <input required type="text" id="fname" name="firstname" placeholder="Your first name">
+                    <label for="lname">Last Name</label>
+                    <input required type="text" id="lname" name="lastname" placeholder="Your last name">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="choose">choose</option>
+                        <option value="australia">Germany</option>
+                        <option value="canada">USA</option>
+                        <option value="usa">UK</option>
+                    </select>
+
+                    <label for="subject">Subject</label>
+                    <textarea required id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
+
+
+            <div class="containerImprint">
+                <img src="img/oldMe.jpg" alt="oldMe" class="image">
+                <div class="overlay">
+                    <h3>Imprint</h3>
+                    <p>missrina.de<br>
+                    Katharina-Sophia Bolinski<br>
+                    Rosenheimer Str. 9<br>
+                    10781 Berlin</p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- Footer-->
+        <footer class="footer">
+            <p>made by <a href="mailto:rina@missrina.de" target="_top">MissRina</a> ©2019 </p>
+        </footer>
+    </body>
+</html>

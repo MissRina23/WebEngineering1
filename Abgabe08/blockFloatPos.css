@@ -1,0 +1,199 @@
+/*
+Einheiten und Farben:
+Alle Farben legen Sie bitte mit der Funktion hsla() oder rgba() an.
+Verwenden Sie nur relative Einheiten, außer für:
+padding, Grundgrößen Schrift, maximale oder minimale Größen.
+*/
+
+/*Erklären Sie kurz, was die Eigenschaft box-sizing bewirkt. Auf welche anderen properties hat es eine Auswirkung?*/
+
+/*
+* Die box-sizing Eigenschaft wird verwendet, um das Standard Boxmodell zu ändern/verändern.
+* Breiten/Höhen von Elementen werden berechnet, soll heissen (border-box definiert die Eigenschaft width die Gesamtbreite, Außenabstände werden hinzuaddiert.)
+* So kann diese Eigenschaft dafür verwendet werden, das Verhalten bestimmter Browser zu imitieren.
+*/
+
+/*Verwenden Sie den Wert border-box für box-sizing.*/
+/*reset*/
+*{
+    box-sizing:  border-box;
+}
+
+
+/*
+Arrangieren Sie die Links nebeneinander über die Eigenschaft display: block|inline|inline-block
+Nehmen Sie für jedes <li> die größtmögliche Breite ein und verteilen Sie sie gleichmäßig über die gesamte Breite.
+Geben Sie eine Hintergrundfarbe für die <li> und runden Sie die rechte obere Ecke leicht ab.
+*/
+
+/*nav li{
+    display: inline-block;
+    width: calc(97.5%/6);
+    background-color: hsla(120,100%,50%,0.2);
+    border-top-right-radius: 10px; !*hiermit wird die obere rechte Ecke abgerundet*!
+}*/
+
+
+/*
+Legen Sie dasselbe Arrangement für die <li> fest, diesmal mit der Eigenschaft float.
+Kommentieren Sie die vorherige display-Regel aus.
+*/
+
+
+nav li{
+    float: left;
+    display: inline-block;
+    width: calc(97.5%/6);
+    background-color: hsla(120, 100%, 50%, 2);
+    border-top-right-radius: 10px;
+
+}
+
+
+/*
+<img> sind inline-Elemente. Grundsätzlich können inline-Elemente keine Größenangaben annehmen.
+Warum geht das bei <img> aber doch?
+=======ANTWORT=======
+- weil man properties setzen kann (border/border-radius, padding/margin, width/height)
+*/
+
+
+/*
+=======ANTWORT========
+position:
+Welche Werte gibt es, was bewirken sie? 
+Erklären Sie kurz Wirkungsweise und Bezugspunkt.
+
+1. absolute, hiermit kann man Elemente losgelöst vom Textfluss positionieren, die mittels left,right,top,bottom festgelegt wird.
+    margin/padding sind auch möglich.
+    Der Bezugspunkt ist das Wurzelelement(HTML-Dokument), es sei denn es gibt ein Vorfahrenelement, dann beziehen sich die Angaben
+    left,right,top,bottom auf das nächste Vorfahrenelement, welches mit position festgelegt/positioniert wird.
+2. fixed, hiermit kann man ein Element starr am Viewpoint ausrichten.
+    Auch hier wird das Element aus dem Textfluss genommen, es entsteht keine Lücke.
+    Positioniert wird mit top, bottom, left, right
+3. relative verwendet man als Bezugspunkt für absolute Kindelemnte, es wird sozusagen an sich selbst ausgerichtet.
+    Eine Lücke im Textfluss bleibt, trotzdem kann man das Element mittels top,bottom,left,right ausrichten.
+4. static ist der Defaultwert der Eigenschaft position
+    Das Element verbleibt im Textfluss.
+    Eigenschaften top,bottom,left,right werden ignoriert
+5. sticky, Elemente mit dieser Eigenschaft behalten ihre Position im Elementfluss, bis sie oben oder unten, also
+    am Seitenende sind und kleben bleiben.
+
+*/
+
+
+/*
+Ergänzen Sie das HTML-Dokument wie folgt:
+Jedes Blumenbild bekommt einen dazugehörigen Text mit dem Namen der Blume.
+Welches Element würden Sie verwenden? Warum?
+
+=======ANTWORT=======
+Ich würde figure und figcaption verwenden, da es sich mit css sehr leicht verändern lässt.
+Das Element figure umschließt den Inhalt und mit figcaption kann man die dazugehörige Beschriftung dem Inhalt zufügen.
+*/
+
+/*
+Verwenden Sie für den Blumennamen das Element <span>.
+Positionieren Sie Bild und Text übereinander also aufeinander, 
+der Text befindet sich auf dem Bild am unteren Rand, schließt bündig links, rechts und unten ab und hat einen halbtransparenten Hintergrund.
+Möglicherweise benötigen Sie weitere Elemente im HTML-Dokument.
+*/
+span{
+    position: absolute;
+    bottom: 17px;
+    width: 100%;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+    background: hsla(10,10%,10%,0.6);
+}
+
+/*
+Platzieren Sie jeweils zwei Bilder mit Text nebeneinander, über die größtmögliche Breite.
+*/
+
+figure,
+figcaption{
+    margin: 0;
+    padding: 0;
+}
+figure.einzeln{
+    position: relative;
+    display: inline-block;
+    width: calc(87.5%/2);
+}
+figure img{
+    width: 100%;
+    /*height: 300px;*/
+    display: block;
+}
+/*figcaption{
+    position: absolute;
+    bottom: -10;
+    width: 100%;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+    background: hsla(10,10%,10%,0.6);
+}*/
+figure.gesamt{
+    position: relative;
+    color: black;
+
+}
+
+/*
+Ist es möglich für alle Bilder die gleich Höhe zu erzwingen?
+======ANTWORT======
+mittels height kann man eine Höhe erzwingen, aber die Bilder werden dann verzerrt
+*/
+
+
+.zitat{
+    margin-bottom: 5%;
+    margin-top: 30%;
+}
+
+/*
+Legen Sie jeweils zwei Textabsätze mit Überschrift nebeneinander, in der größtmöglichen Breite.
+Verwenden Sie einmal display, und einmal float.
+Grenzen Sie die Texte durch Hintergrundfarben voneinander ab.
+Wie sieht es hier mit der Höhe aus?
+*/
+
+
+
+.sec{
+    float: left;
+    width: 50%;
+    clear: left;
+    background-color: hsla(80, 90%, 40%, 1);
+}
+.sec1{
+    float: right;
+    width: 50%;
+    clear: right;
+    background-color: hsla(20, 60%, 50%, 1);
+}
+
+
+/*
+Fixieren Sie die Navigation oben.
+Verwenden Sie einmal den Wert fixed und einmal den Wert sticky.
+*/
+/* ----fixed--- */
+/*
+#navigation {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    */
+
+/* ---sticky--- */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%; }
+
+
+

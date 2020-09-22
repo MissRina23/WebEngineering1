@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<h1>Formulare</h1>
+<form action="" method="post">
+    <fieldset>
+        <legend>Persönliche Daten</legend>
+        <label for="textfield">Nachname </label><input type="text" name="textfield" id="textfield">
+        <label for="textfield">Vorname </label><input type="text" name="textfield" id="textfield">
+    </fieldset>
+
+    <fieldset>
+        <legend>Interessen</legend>
+    </fieldset>
+
+    <fieldset>
+        <legend>Filme</legend>
+        <input type="radio" name="radio" id="radio"> <label for="radio">scify</label>
+        <input type="radio" name="radio" id="radio"> <label for="radio">thriller</label>
+        <input type="radio" name="radio" id="radio"> <label for="radio">lovestory</label>
+        <input type="radio" name="radio" id="radio"> <label for="radio">mystery</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Pizza</legend>
+        <label for="checkbox">Salami</label><input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Thunfisch</label><input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Käse</label><input type="checkbox" name="checkbox" id="checkbox">
+    </fieldset>
+
+    <fieldset>
+        <legend>Lieblingsort</legend>
+        <input list="places"/>
+        <datalist id="places">
+            <option value="Berlin"></option>
+            <option value="San Francisco"></option>
+            <option value="Copenhagen"></option>
+        </datalist>
+    </fieldset>
+
+    <fieldset>
+        <legend>überprüfen und senden</legend>
+        <button type="submit" name="button">Drück mich!</button>
+        <button type="reset" name="button">alles wieder leer</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>noch überall nicht verlässliche</legend>
+        <label>Lieblingsfarbe </label><input type="color" name="color" id="color">
+        <label>wie gut ist deine Laune? </label><input type="range" name="range" id="range">
+        <label>Suche </label><input type="search" name="search" id="search">
+        <label>E-Mail</label><input type="email" name="eamil" id="email">
+
+    </fieldset>
+</form>
+</body>
+</html>
+

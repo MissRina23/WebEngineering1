@@ -1,0 +1,100 @@
+
+/* Erstellen Sie ein Stylesheet für blumen.html */
+
+
+
+
+/* 1. erstellen Sie einen eigenen reset, inkl. box-sizing */
+*{
+    box-sizing: content-box;
+}
+
+
+
+/* 2. bauen Sie die wichtigsten schriften relativ zueinander auf */
+html{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    font-size: 1.7rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+
+
+
+/* 3. sprechen Sie für die folgenden Aufgaben alle Elemente an, ohne Klassen oder ids zu verwenden */
+/* 4. färben Sie die Textabschnitte unterschiedlich, jeden zweiten und dritten anders */
+/* Verwenden Sie die Funktionen rgba() oder hsla() für Farben. */
+
+
+p{
+    background: hsla(0, 0%, 100%,1);
+}
+p:nth-child(4){
+    background: hsla(304, 80%, 88%,1);
+}
+p:nth-child(6){
+    background: hsla(302, 45%, 67%, 1);
+}
+p:nth-child(10){
+    background: hsla(304, 80%, 88%,1);
+}
+p:nth-child(12){
+    background: hsla(302, 45%, 67%,1);
+}
+
+
+
+/* 5. zeichnen Sie die Quellenangabe für das Zitat dezenter aus */
+cite{
+    font-family: Serif;
+}
+
+
+
+/* 6. geben Sie allen Bilder die Breite von höchstens 30% */
+/* 7. das zweite Bild und darauf folgend jedes dritte Bild bekommt eine Transparenz von 0.3 */
+/* Verwenden Sie opacity für die Transparenz. Erklären Sie als Kommentar den Unterschied zwischen alpha und opacity */
+img{
+    width: 30%;
+}
+img:nth-child(4){
+    opacity: 0.3;
+}
+img:nth-child(7){
+    opacity: 0.3;
+}
+img:nth-child(10){
+    opacity: 0.3;
+}
+img:nth-child(13){
+     opacity: 0.3;
+ }
+
+/* opacity setzt für das Element und auch Kind-Element eine Transparenz, Alpha hingegen nur nur für eine einzige Deklaration */
+
+
+/* 8. die Texte und ihre Überschriften (section oder article) werden alternierend links und rechts ausgerichtet. */
+article{
+    float: right;
+}
+section{
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+

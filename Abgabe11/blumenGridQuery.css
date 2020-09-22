@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    background: hsla(120,87%,43%,0.7);
+    list-style: none;
+    padding: 0;
+}
+
+
+nav li{
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-gap: 5px;
+    align-items: flex-start;
+
+}
+
+
+main>div:first-of-type{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.img{
+    display: grid;
+    grid-column: 5 / span 1;
+    order: 5;
+
+
+}
+img{
+    height: 20vh;
+    width: auto;
+}
+
+main>div:last-of-type{
+    display: grid;
+    grid-column: auto / span 4;
+    grid-template-columns: 1fr 1fr;
+}
+article>div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+article{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    margin-left: 30%;
+    
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10%;
+}
+
+section>h2{
+    display: grid;
+    justify-content: center;
+    align-content: stretch;
+}
+/*Auflösungen*/
+/* MacBookAir Non-Retina*/
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1)
+{
+    body{background: hsla(240, 100%,50%,0.1)}
+}
+
+/* iPad 1 */
+@media screen
+and (min-width: 768px)
+and (max-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1)
+{
+    body{background: hsla(132,100%,50%,0.1)}
+
+}
+/* iPhone7+ Portrait and Landscape */
+@media screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3){
+    [class]{width: 100%}
+    body{background: hsla(0,100%,50%,0.1);}
+}
